@@ -1,0 +1,18 @@
+import sys
+def sum_fibbo(a):
+    fibo = [0,1]
+    even = 0
+    while fibo[1] <= a:
+        z  = fibo[1]+fibo[0]
+        fibo[0] = fibo[1]
+        fibo[1] = z
+        if (z%2)!= 1:
+            even = even+z
+
+    return even
+    
+    
+t = int(input().strip())
+for a0 in range(t):
+    n = int(input().strip())
+    print(sum_fibbo(n))
